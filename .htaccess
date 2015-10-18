@@ -3,4 +3,4 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(index\.php)?\?([^&\ ]+)
 RewriteRule ^ /%1? [L,R=301]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.php?path=$1 [L]
+RewriteRule ^(.*)$ /?goto=$1 [L]
